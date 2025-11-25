@@ -88,11 +88,7 @@ h1, h2, h3, h4, h5, ul {
 }
 
 .second-menu-item-name {
-    padding: 0 5px 0 10px;
-}
-
-.second-menu-item {
-    padding: 5px 0;
+    padding: 3px 5px 3px 10px;
 }
 
 /* Display menu to the right */
