@@ -36,6 +36,7 @@ overlay.addEventListener('click', function () {
     overlay.style.display = 'none';
     secondMenu.forEach(secondMenu => secondMenu.style.display = 'none');
     firstMenuItemName.forEach(item => item.classList.remove('is-open'));
+    thirdMenus.forEach(thirdMenu => thirdMenu.style.display = 'none');
 });
 
 // Change color when menu button is clicked

@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, ul {
 .third-menu-container {
     border-bottom-right-radius: 10px;
     background-color: lightgray;
+    cursor: auto;
 }
 
 .second-menu {
