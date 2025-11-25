@@ -1,85 +1,107 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
 }
+
 header {
     width: 100%;
     background-color: lightslategray;
-    margin-top: 1rem;
 }
+
 /* Create the nav width and display */
 nav {
     width: 1080px;
     margin: auto;
     position: relative;
 }
+
 nav, nav ul {
     display: flex;
 }
+
+.first-menu {
+    gap: 1rem;
+}
+
 /* We need to make sure menu stays over the overlay */
-.second-menu {
+.second-menu, .first-menu-item-name {
     z-index: 999;
 }
-/* second menu stays hiddent in first click */
+
+/* second menu stays hidden in first click */
 .second-menu, .third-menu-container {
     display: none;
     background-color: white;
 }
+
 /* General styling */
 ul {
     list-style: none;
 }
-h1,h2,h3,h4,h5,ul {
+
+h1, h2, h3, h4, h5, ul {
     padding: 0;
     margin: 0;
 }
+
 .fourth-menu {
     display: flex;
     flex-direction: column;
 }
+
 /* General style */
 .second-menu-item:hover {
     background-color: #ececec;
     cursor: pointer;
 }
+
 .second-menu-item-name {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .first-menu-item-name {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
 }
+
 .first-menu-item-name:hover {
     cursor: pointer;
 }
+
 .third-menu-container {
     border-bottom-right-radius: 10px;
     background-color: lightgray;
 }
+
 .second-menu {
     border-bottom-left-radius: 10px;
     padding: 10px 0;
 }
+
 .second-menu-item-name {
     padding: 0 5px 0 10px;
 }
+
 .second-menu-item {
     padding: 5px 0;
 }
+
 /* Display menu to the right */
 .second-menu {
+    position: absolute;
     width: 200px;
     gap: 1rem;
+    left: 0;
 }
-.second-menu {
-    position: absolute;
-}
+
 .third-menu-container {
     position: absolute;
     top: 0;
@@ -92,17 +114,27 @@ h1,h2,h3,h4,h5,ul {
     overflow-x: hidden;
     padding: 1rem;
 }
+
 .second-menu, .third-menu-container {
     height: 500px;
 }
+
 /* Overlay */
 #overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
     z-index: 99;
+}
+
+.is-open {
+    background-color: white;
+}
+
+.active {
+    display: block;
 }
